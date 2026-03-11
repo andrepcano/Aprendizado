@@ -74,7 +74,7 @@ elif idade >= 40 and idade < 60:
 else:
     print("Você é um idoso!!")'''
 
-
+#EXERCÍCIOS DE CONDIÇÕES (IF,ELIF AND ELSE)
 
 '''quantidade_macas_vendidas = int(input("Quantas maças foram vendidas: "))
 quantidade_bananas_vendidas = int(input("Quantas bananas foram vendidas: "))
@@ -180,7 +180,7 @@ else:
 
 
 
-renda_mensal = float(input("Digite sua renda mensal: "))
+'''renda_mensal = float(input("Digite sua renda mensal: "))
 parcela = float(input("Digite o valor da parcela desejada: "))
 renda_minima = 2000.00
 parcela_maxima = (renda_mensal * 30) /100
@@ -190,4 +190,116 @@ if renda_mensal < renda_minima:
 elif parcela > parcela_maxima:
     print("Infelizmente você nao tem o direito de fazer o empréstimo pois sua parcela excede o límite!!")
 else:
-    print("PARABÉNS!! O empréstimo foi APROVADO!!")
+    print("PARABÉNS!! O empréstimo foi APROVADO!!")'''
+
+#FIM EXERCÍCIOS DE CONDIÇÕES (IF,ELIF AND ELSE)
+
+#EXERCÍCIOS DE LAÇOS DE REPETIÇÃO (FOR AND WHILE)
+
+'''clientes = ["João", "Maria", "Carlos", "Ana", "Beatriz"]
+
+for cliente in clientes:
+    print(f"Ola {cliente}, seja bem vindo a nossa loja!!")
+    range(4)'''
+
+
+
+'''contador = 0
+
+while contador < 5:
+    print("Bem-vindo ao Buscante!")
+    contador += 1
+    break;'''
+
+
+
+'''valores = [10, 20, 30, 40, 50]
+
+for valor in valores:
+    total_soma = sum(valores)
+    print(f"A soma total dos valores é de R$: {total_soma:.2f}")
+    break;'''
+
+
+
+'''projetos = ["website", "jogo", "análise de dados", None, "aplicativo móvel"]
+
+for projeto in projetos:
+    if projeto is None:
+        print(f"Valor Ausente")
+    else:
+         print(projeto)'''
+
+
+
+'''livros = ["1984", "Dom Casmurro", "O Pequeno Príncipe", "O Hobbit", "Orgulho e Preconceito"]
+
+for livro in livros:
+    if livro == "O Hobbit":
+        print(f"O livro {livro} é um clássico da literatura de fantasia!!!")
+        break;'''
+
+
+
+'''estoques = [{'livro': '1984', 'quantidade': 1},
+    {'livro': 'Dom Casmurro', 'quantidade': 32}]
+
+for estoque in estoques:
+    if estoque['quantidade'] > 0:
+        print(f"Livro disponível: {estoque['livro']}")
+
+compra = input(f"Você deseja comprar qual livro: ")
+
+for estoque in estoques:
+    if estoque ['livro'] == compra and estoque['quantidade'] > 0:
+        estoque["quantidade"] -= 1
+        print(f"Parabéns pela compra do livro: {estoque['livro']} ")
+        print(f"Quantidade atual: {estoque['quantidade']}")
+        break;
+    else:
+        print("Desculpe, Livro Esgotado!!")'''
+
+
+
+'''numeros_contagem = [10,9,8,7,6,5,4,3,2,1,0]
+
+for numero_contagem in numeros_contagem:
+    if numero_contagem > 0 and numero_contagem %2 == 0:
+        print(f"Faltam apenas {numero_contagem} segundos - Não perca essa oportunidade!")
+    elif numero_contagem > 0 and numero_contagem %2 != 0:
+        print(f"A contagem continua: {numero_contagem} segundos restantes.")
+    else:
+        print("Aproveite a promoção agora!!")
+    break;'''
+
+
+
+'''livros = [
+    {"nome": "1984", "estoque": 5},
+    {"nome": "Dom Casmurro", "estoque": 0},
+    {"nome": "O Pequeno Príncipe", "estoque": 3},
+    {"nome": "O Hobbit", "estoque": 0},
+    {"nome": "Orgulho e Preconceito", "estoque": 2}
+]
+
+for livro in livros:
+    if livro['estoque'] > 0:
+        print(f"O livro {livro['nome']} está disponível!!")'''
+
+
+
+
+
+while True:
+    nome_user = input("Digite seu nome de usuário: ")
+    senha_user = input("Digite sua senha: ")
+
+    if len(nome_user) < 5:
+        print("O nome de usuário deve conter pelo menos 5 caractéres!!")
+        continue
+    elif len(senha_user) < 8:
+        print("A senha deve conter pelo menos 8 caractéres!!")
+        continue
+    print("Cadastro realizado com Sucesso!!")
+    break;
+    
