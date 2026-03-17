@@ -27,6 +27,7 @@ else:
 
 
 
+
 '''-Ex.2 Crie um algoritmo para solicitar o salario recebido durante o mes
  e calcule o imposto a ser pago, bem como o salario a receber
 
@@ -41,6 +42,7 @@ print(f"O valor a ser recebido ja com o imposto descontado é de R$ {salario - i
 
 
 
+
 '''-Ex.3 Solicite o salario do usuario é descubra o quanto de aumento teve'''
 
 '''salario_antigo = float(input("Qual era seu salário: "))
@@ -49,6 +51,7 @@ aumento = float(input("Quantos porcento de aumento você teve: "))
 salario_atual = (salario_antigo * aumento) /100
 print(f"O valor do aumento no seu salário é deR$: {salario_atual:.2f}")
 print(f"O valor total do seu salário atual é de R$ {salario_antigo + salario_atual:.2f}")'''
+
 
 
 
@@ -88,6 +91,7 @@ else:
 
 
 
+
 '''atividade_a = int(input("Digite o tempo gasto na atividade A: "))
 atividade_b = int(input("Digite o tempo gasto na atividade B: "))
 atividade_c = int(input("Digite o tempo gasto na atividade C: "))
@@ -98,6 +102,7 @@ else:
     print("ERRO!! os dias nao podem ser negativos!!")'''
 
 
+
 '''temperatura_atual = float(input("Qual a temperatura atual em Celsius do servidor: "))
 temperatura_maxima = 25.0
 
@@ -105,6 +110,7 @@ if temperatura_atual > temperatura_maxima:
     print("ALERTA!! Limite acima do permitido!!!")
 else:
     print("Temperatura dentro do limite permitido!!")'''
+
 
 
 
@@ -121,6 +127,7 @@ else:
 
 
 
+
 '''total_despesas = float(input("Digite o total de despesas do mês R$: "))
 orcamento = 3000.00
 
@@ -128,6 +135,7 @@ if total_despesas > orcamento:
     print("ALERTA!! Suas despesas estão acima do seu orçamento!!")
 else:
     print("Suas despesas estão dentro do limite estabelecido!!")'''
+
 
 
 
@@ -140,6 +148,7 @@ if hora_atual > horario_maximo or hora_atual < horario_minimo:
 else:
     print("Acesso Liberado!!!")
     print("Seja Bem Vindo!!!")'''
+
 
 
 
@@ -158,6 +167,7 @@ else:
 
 
 
+
 '''distancia_percorrida = float(input("Digite o total de distância percorida em (Km): "))
 
 if distancia_percorrida <= 100:
@@ -169,6 +179,7 @@ else:
 
 
 
+
 '''numero = int(input("Digite um número inteiro e direi se é par ou ímpar: "))
 par = numero %2 == 0
 impar = numero %2 != 0
@@ -177,6 +188,7 @@ if par:
     print(f"O número {numero} é PAR!!")
 else:
     print(f"O número {numero} é IMPAR!!")'''
+
 
 
 
@@ -213,6 +225,7 @@ while contador < 5:
 
 
 
+
 '''valores = [10, 20, 30, 40, 50]
 
 for valor in valores:
@@ -221,6 +234,7 @@ for valor in valores:
     break;'''
 
 
+ 
 
 '''projetos = ["website", "jogo", "análise de dados", None, "aplicativo móvel"]
 
@@ -232,12 +246,14 @@ for projeto in projetos:
 
 
 
+
 '''livros = ["1984", "Dom Casmurro", "O Pequeno Príncipe", "O Hobbit", "Orgulho e Preconceito"]
 
 for livro in livros:
     if livro == "O Hobbit":
         print(f"O livro {livro} é um clássico da literatura de fantasia!!!")
         break;'''
+
 
 
 
@@ -261,6 +277,7 @@ for estoque in estoques:
 
 
 
+
 '''numeros_contagem = [10,9,8,7,6,5,4,3,2,1,0]
 
 for numero_contagem in numeros_contagem:
@@ -271,6 +288,7 @@ for numero_contagem in numeros_contagem:
     else:
         print("Aproveite a promoção agora!!")
     break;'''
+
 
 
 
@@ -289,8 +307,7 @@ for livro in livros:
 
 
 
-
-while True:
+'''while True:
     nome_user = input("Digite seu nome de usuário: ")
     senha_user = input("Digite sua senha: ")
 
@@ -301,5 +318,97 @@ while True:
         print("A senha deve conter pelo menos 8 caractéres!!")
         continue
     print("Cadastro realizado com Sucesso!!")
-    break;
-    
+    break;'''
+
+#FIM EXERCÍCIO LAÇOS DE REPETIÇÃO (FOR AND WHILE)
+
+
+#INÍCIO EXERCÍCIOS DE FUNÇÕES (DEF)
+
+'''def calculo_idade():
+    ano_nascimento = int(input("Digite seu ano de nascimento: "))
+    ano_atual = int(input("Digite o ano atual: "))
+    idade = ano_atual - ano_nascimento
+    print(f"Você tem {idade} anos!!")
+calculo_idade()'''
+
+
+
+'''def contar_caracteres(palavra):
+    palavra = input("Digite uma palavra e contarei quantos caracteres ela tem: ")
+    quantidade_caracteres = len(palavra)
+    print(f"A palavra {palavra} tem {quantidade_caracteres} caracteres!!")
+contar_caracteres('palavra')'''
+
+
+
+'''def saudaçao_personalizada(hora_dia):
+
+    if hora_dia < 12:
+        return "Bom Dia!!"
+    elif 12 <= hora_dia < 18:
+        return "Boa Tarde!!"
+    else:
+        return "Boa Noite!!"
+
+hora_atual = float(input("Qual o horario atual(0-23): "))
+print(saudaçao_personalizada(hora_atual))'''
+
+
+
+'''def convercao(lista):
+    return [int (telefone) for (telefone) in lista]
+
+def confirmar_tipos(lista):
+
+    for num in lista:
+        if not isinstance(num, int):
+            return "Erro na conversão"
+        
+    return "Todos os números foram convertidos corretamente!"
+
+telefones = ["11987654321", "21912345678", "31987654321", "11911223344"] 
+
+telefones_convertidos = convercao(telefones)
+print(confirmar_tipos(telefones_convertidos))'''
+
+'''def area(larg, com):
+    resultado_area = larg * com
+    print(f"O resultado da área do retângulo é: {resultado_area}")
+
+l = float(input("Me informa a largura e comprimento do retângulo: " ))
+c = float(input("Digite o comprimento do retângulo: "))
+area(l, c)'''
+
+
+
+'''def escreva(palavra):
+    print("-" * 30)
+    print(palavra)
+    print("-" * 30)
+
+
+p = input("Digite uma palavra: ")
+escreva(p)'''
+
+
+
+'''def contador(inicio, fim, passo):
+    while (passo >= 0 and inicio <=fim) or (passo < 0 and inicio >= fim):
+        print(inicio)
+        inicio += passo
+
+
+contador(0, 10, 1)
+contador(10, 0, -1)
+
+print("Agora é a sua vez de aumentar a contagem!!")
+i = int(input("Digite o número de início: "))
+f = int(input("Digite o número do fim: "))
+p = int(input("Digite o número do passo: "))
+contador(i, f, p)'''
+
+
+
+
+
