@@ -227,7 +227,7 @@ else:
 
 #PEDRA, PAPEL OU TESOURA
 
-import random
+'''import random
 
 jogadas = ['pedra', 'papel', 'tesoura']
 
@@ -248,7 +248,242 @@ elif (jogada == 'pedra' and computador == 'papel') or \
     (jogada == 'tesoura' and computador == 'pedra'):
     print("O computador ganhou do jogador!!")
 else:
-    print("Opçao Invalida")
+    print("Opçao Invalida")'''
+
+
+
+#EXERCÍCIOS LAÇOS DE REPETIÇÃO
+
+'''for c in range(2, 10, 2):
+    print(c)
+print("FIM")
+
+
+n = int(input("Digite um numero: "))
+for c in range(0, n+1):
+    print(c)
+print("FIM")
+
+
+i = int(input("Inicio: "))
+f = int(input("Fim: "))
+p = int(input("Passo: "))
+
+for c in range(i, f+1, p):
+    print(c)
+print("FIM")
+
+
+
+#Faça um programa que mostre na tela uma contagem regressiva 
+#para o estouro de fogos de artifício, indo de 10 até 0, com
+#uma pausa de 1 seg entre elas
+
+# import time
+
+# for c in range(10, -1, -1):
+#     print("Em {}".format(c))
+#     time.sleep(1)
+# print("FIM")'''
+
+
+
+#Crie um programa que mostra na tela todos os numeros pares que
+#estão no intervalo entre 1 e 50
+
+'''for c in range(49, 0, -1):
+    if (c % 2 == 0):
+        print(c)
+print("FIM")'''
+
+
+
+#Faça um programa que calcule a soma de todos os numeros impares
+#que sao multiplos de 3 e que se encontram entre 1 ate 500.
+
+'''soma = 0
+
+for c in range(1, 501):
+    if(c % 2 != 0):
+        soma += c 
+        print("Soma dos números ímpares entre 1 e 500: ", soma)
+print("FIM")
+'''
+
+
+#Faça um programa que leia um número qualquer e mostre
+#na tela a sua tabuada, utilizando um laço for
+
+'''numero = int(input("Me dê um número e direi a tabuada: "))
+
+for c in range(1, 11):
+    resultado = (numero * c)
+    print(f" {numero} x {c} = {resultado}")
+print("FIM")
+'''
+
+
+#Desenvolva um programa que leia seis números inteiros e mostre
+#a soma apenas daqueles que forem pares. Se o valor digitado for
+#ímpar desconsidere-o
+
+'''soma = 0
+cont = 0
+
+for c in range(1,7):
+    numero = int(input("Digite o {} valor: ".format(c)))
+
+    if numero % 2 == 0:
+        soma += numero
+        cont += 1
+        print("Voce informou {} numeros e a soma foi: {}".format(cont, soma))
+print("FIM")'''
+    
+
+
+#Desenvolva um programa que leia o primeiro termo e a razão de uma PA.
+#No final, mostre os 10 primeiros termos dessa progressão
+
+'''cont = 0
+termo_um = int(input("Me informe o primeiro termo de uma PA: "))
+razao = int(input("Me informe a razão de uma PA: "))
+termo_dez = termo_um + (10 - 1) * razao
+
+for c in range (termo_um, termo_dez + razao, razao):  
+    cont += 1
+    print("O {} termo da PA é: {}".format(cont, c))
+print("FIM")
+'''
+
+
+#Faça um programa que leia um número inteiro e diga se ele é
+#ou não um número primo.
+
+#DIFICIL DEMAIS
+# numero = int(input("Me diga um número e direi se é inteiro: "))
+# total = 0
+
+'''for c in range(1, numero + 1):
+    if (numero % c == 0):
+        print("\033[33m", end="")
+        total += 1
+    else:
+        print("\033[31m", end="")
+    print("{} ".format(c), end="")
+if (total == 2):
+    print("É um número primo!")
+else:
+    print("Não é um número primo!")
+print("Número {} foi divísivel {} vezes".format(numero, total))'''
+
+
+
+#Crie um programa que leia uma frase qualquer e diga se ela é
+#um palindromo, desconsiderando os espaços
+
+#DIFICIL DEMAIS
+'''texto = input("Escreva algo e direi se é um palíndromo: ")
+texto_minusculo = texto.lower()
+texto_junto = ""
+texto_invertido = ""
+
+for c in texto_minusculo:
+    if c != " ":
+        texto_junto = texto_junto + c
+
+for c in texto_junto:
+    texto_invertido = c + texto_invertido
+if texto_junto == texto_invertido:
+    print("O texto {} é um palíndromo".format(texto))
+else:
+    print("O texto {} não é um palíndromo".format(texto))'''
+
+
+
+#Crie um prpgrama que leia o ano de nascimento de sete pessoas.
+#No final, mostre quantas pessoas ainda não atingiram a maioridade
+#e quantas ja atingiram
+
+'''from datetime import date
+
+total_maior = 0
+total_menor = 0
+ano_atual = date.today().year
+for pessoas in range(1, 8):
+    ano_nascimento = int(input("Em que ano a {} pessoa nasceu: ".format(pessoas)))
+    idade = ano_atual - ano_nascimento
+    print("Essa pessoa tem {} anos".format(idade))
+
+    if idade >= 21:
+        print("A pessoa {} que tem {} anos é maior de idade!".format(pessoas, idade))
+        total_maior += 1
+    else:
+        print("A pessoa {} que tem {} anos é menor de idade!".format(pessoas, idade))
+        (total_menor) += 1
+print("{} pessoas são Maior de idade!".format(total_maior))
+print("{} pessoas são menor de idade!".format(total_menor))'''
+
+
+
+#Faça um programa que leia o peso de 5 pessoas.No final mostre
+#qual foi o maior e o menor peso lidos respectivamente
+
+'''maior_peso = 0
+menor_peso = 0
+
+for pessoa in range(1,6):
+    peso = float(input("Qual peso da pessoa {}: ".format(pessoa)))
+    if pessoa == 1:
+        maior_peso = peso
+        menor_peso = peso
+    else:
+        if peso > maior_peso:
+            maior_peso = peso
+        if peso < menor_peso:
+            menor_peso = peso
+print("O maior peso lido foi de {}Kg".format(maior_peso))
+print("O menor peso lido foi de {}Kg".format(menor_peso))'''
+
+
+
+#Desenvolva um programa que leia o nome,idade,sexo de 4 pessoas
+#No final do programa, mostre:
+#- A média de idade do grupo
+#- Qual é o nome do homem mais velho
+#- Quantas mulheres tem menos de 20 anos
+
+#FIZ GRANDE PARTE SOZINHO(MUITO LEGAL)
+   
+'''fem_menor = 0
+idade_masc = 0
+nome_masc_velho = ""
+soma_idade = 0
+
+for pessoa in range(1,5):
+    nome = input("Digite o nome da {} pessoa: ".format(pessoa))
+    idade = int(input("Digite s idade da {} pessoa: ".format(pessoa)))
+    sexo = input("Digite (M) para masculino e (F) para para identificar o sexo da {} pessoa : ".format(pessoa))
+    
+    soma_idade += idade
+    
+    if sexo =="M":
+        idade_masc = idade
+        nome_masc_velho = nome
+    if sexo == "F":
+        if idade < 20:
+            fem_menor += 1
+
+media = soma_idade / 4
+    
+
+print("A média de idade do grupo é {} anos".format(media))
+print("A Homem mais velho é o {} com {} anos".format(nome_masc_velho, idade_masc))
+print("{} mulheres tem menos de 20 anos".format(fem_menor))'''
+
+
+
+
+
 
 
 
