@@ -410,5 +410,121 @@ contador(i, f, p)'''
 
 
 
+#1 - Sistema de login com nível de acesso. solicite usuário e senha. Se usuário é igual a admin, 
+#crie uma estrutura de condição aninhada para solicitar senha e se a mesma for '1234', mostre que 
+#o usuário terá acesso total. Caso o usuário insira a senha incorreta, mostre senha incorreta. 
+#Caso usuário insira usuário incorreto, mostre usuário incorreto. 
+'''usuario = input("Digite o usuário: ")
+    senha = input("Digite a senha: ")
+
+if usuario == "admin":
+    if senha == "1234":
+        print("ACESSO TOTAL")
+    else:
+        print("Senha incorreta!")
+else:
+    print("Usuário incorreto!")'''
+
+
+
+
+#2. Classificação de idade. solicite idade, se idade for maior ou igual a 18, crie uma estrutura de 
+#alinhada para verificar se idade é maior ou igual a 60, se for, mostre que é idoso, senão, mostre 
+#que é adulto. Se idade for maior ou igual a 12, adolescente, caso contrário, criança. 
+
+'''idade = int(input("Digite sua idade: "))
+
+if idade >= 18:
+    if idade >= 60:
+        print("Você é idoso")
+    else:
+        print("Você é adulto")
+elif idade >= 12:
+    print("Você é adolescente!")
+else:
+    print("Você é criança!")
+    '''
+    
+
+
+#3. Aprovação com distinção. solicite nota, se nota for maior ou igual a 6, crie condição aninhada 
+#para verificar se nota é maior ou igual a 9, se for aprovado com excelência. 
+#e nota não for maior ou igual a 9, Aprovado. Caso contrário, reprovado. 
+
+'''nota = float(input("Qual foi sua nota: "))
+
+if nota >= 6:
+    if nota >= 9:
+        print("Aprovado com EXCELÊCIA!")
+    else:
+        print("Aprovado!")
+else:
+    print("Reprovado!")'''
+
+
+
+
+#4. Verificação de número. Solicite número e verifique se é maior do que zero, se for, 
+#crie uma estrutura de condição aninhada para verificar se este número é par, se for, 
+#print positivo e par. Se não for, Positivo e ímpar. Se número for igual a zero, print zero,
+#caso contrário negativo. 
+
+'''numero = float(input("Digite um número: "))
+
+if numero > 0:
+    if numero % 2 == 0:
+        print("O número é par!")
+    else:
+        print("O número é ímpar")
+elif numero == 0:
+    print("O número é 0!")
+else:
+    print("O número é NEGATIVO!")
+'''
+
+
+
+#5. Sistema de desconto. solicite valor e se a pessoa é vip ou não. Se valor maior ou igual 200, 
+#crie estrutura de condição aninhada para verificar se a pessoa é vip, se for, 
+#ofereça 20% de desconto sobre o valor e mostre o valor a ser descontado e o valor final, 
+#considerando o desconto. Se não for vip, ofereça o desconto de 10%. 
+
+'''valor = float(input("Digite um valor: "))
+pessoa = input("Você é VIP (Sim) ou (Não): ").lower()
+
+if valor >= 1000:
+    if pessoa == "sim":
+        desconto_vip = valor /20
+        valor_desconto_vip = valor - desconto_vip
+        print("Você te direito a 20% de desconto, o desconto fica de {}R$ e o valor final é {}R$".format(desconto_vip, valor_desconto_vip))
+else:
+    desconto_sem_vip = valor / 10
+    valor_desconto = valor - desconto_sem_vip
+    print("Você tem direito a 10% de desconto, o desconto fica de {}R$ e o valor final é {}R$".format(desconto_sem_vip, valor_desconto))'''
+
+
+
+
+#6. Crie um algoritmo para perguntar para o usuário qual o dia da semana, caso seja sábado, 
+#escreva dia de festa. Caso seja, domingo, pergunte sobre a condição física do usuário, 
+#se estiver com dores de cabeça, print recuperando, então, precisa descansar. Caso contrário, 
+#apenas descanse. Caso não seja sábado ou domingo, mostre trabalhando, trabalhando e trabalhando! 
+
+'''dia_semana = input("Qual o dia da semana: ").lower()
+
+if dia_semana == "sabado":
+    print("Dia de festa!")
+
+elif dia_semana == "domingo":
+    condicao_fisica = input("Qual sua condição física: ")
+    if condicao_fisica == "dores de cabeça":
+        print("Recuperando, então precisa descansar!")
+    else:
+        print("Apenas descanse!")
+else:
+    print("Trabalho, trabalho, trabalho!!!")
+'''
+
+
 
 

@@ -482,10 +482,135 @@ print("{} mulheres tem menos de 20 anos".format(fem_menor))'''
 
 
 
+#Exercícios de módulos MATH
+
+#Ctie um programa que leia um número real qualquer e transforme em
+#um número inteiro
+
+'''import math
+
+num = float(input("Digite um numero qualquer e transformarei em um numero inteiro: "))
+
+print("O numero {} inteiro é {}".format(num, int(num)))'''
 
 
 
+#Faça um programa que leia o comprimento do cateto oposto e do
+#cateto adjacente de um triângulo, calcule e mostre o comprimento da hip
+'''import math
+
+cat_adj = float(input("Me diga o comprimento do cateto adjacente: "))
+cat_op = float(input("Me diga o comprimento do cateto oposto: "))
+
+hip = math.sqrt(math.pow (cat_adj, 2) + math.pow (cat_op, 2))
+print("A hipotenusa dos catetos {} e {} é: {}".format(cat_adj, cat_op, hip))'''
 
 
 
+#Faça um rpograma que leia um ângulo qualquer e mostre na tela o valor
+#do seno, cosseno e tangente desse ãngulo
+'''import math
+
+angulo = int(input("Qual ângulo você quer saber o seno,coss, e tan: "))
+rad = math.radians(angulo)
+
+seno = math.sin(rad)
+coss = math.cos(rad)
+tan = math.tan(rad)
+
+print("O seno do ângulo é: {:.2f}".format(seno))
+print("O cosseno do ângulo é: {:.2f}".format(coss))
+print("A tângente do ângulo é: {:.2f}".format(tan))'''
+
+
+
+#Um professor quer sortear um de seus quatro alunos para apagar
+#o quadro. Faça um programa que ajude ele, lendo o nome deles e 
+#escrevendo o nome do escolhido
+'''from random import choice
+
+nome_1 = input("Nome do 1 aluno: ")
+nome_2 = input("Nome do 2 aluno: ")
+nome_3 = input("Nome do 3 aluno: ")
+nome_4 = input("Nome do 4 aluno: ")
+lista = [nome_1, nome_2, nome_3, nome_4]
+
+escolhido = choice(lista)
+print("O aluno escolhido foi: {}".format(escolhido))'''
+
+
+
+#O mesmo professor do desafio anterior quer sortear a ordem de
+#apresentação de trabalhos dos alunos. Faça um programa que leia o 
+#nome dos quatro alunos e msotre a ordem sorteada
+'''from random import shuffle
+
+nome_1 = input("Nome do 1 aluno: ")
+nome_2 = input("Nome do 2 aluno: ")
+nome_3 = input("Nome do 3 aluno: ")
+nome_4 = input("Nome do 4 aluno: ")
+lista = [nome_1, nome_2, nome_3, nome_4]
+
+ordem = shuffle(lista)
+print("A ordem da apresentação será:")
+print(lista)'''
+
+
+
+#Exercicios (IF, ELIF, ELSE)
+
+#Escreva um rpograma que faça o computador escolher entre 1 e 5
+# e peça para o usuário tentar descobrir qual numero foi
+#o programa deve mostrar se o usuário venceu ou perdeu
+'''import random
+
+tentativa = int(input("Tente acertar o número escolhido entre 0 a 5: "))
+
+numero = random.randint(0, 6)
+
+if tentativa == numero:
+    print("VOCÊ ACERTOU!")
+else:
+    print("Você ERROU")'''
+
+
+
+#Escreva um programa que leia a velocidade de um carro.
+#Se ele ultrapassar 80Km(mostre uma mensagem dizendo "multado")
+#A multa custará 7R$ para cada km a cima do permitido
+
+'''velocidade = int(input("Qual a velocidade que seu carro passou?: "))
+
+if velocidade > 80:
+    print("Você foi multado!")
+    multa = (velocidade-80) * 7
+    print("Você terá que pagar uma multa de {:.2f}R$".format(multa))
+print("Tenha um bom dia! Dirija com SEGURANÇA!")
+'''
+
+
+#Crie um programa que leia o número inteiro e mostre na tela
+#se ele é par ou ímpar
+
+'''numero = int(input("Digite um número e direi se é par ou ímpar: "))
+
+if numero % 2 == 0:
+    print("O número é par")
+else:
+    print("O número é ímpar")'''
+
+
+
+#Desenvolta um programa que pergunte a distância de uma viagem em Km
+#Calcule o preço da passagem, cobrando 0,50R$ por Km para viagens até 200km
+#e 0,45R$ para mais longas
+
+'''distancia = int(input("Qual a distância da viagem em Km: "))
+
+if distancia <= 200:
+    preco = 0.50 * distancia
+    print("Você terá que pagar {}R$ pela passagem:".format(preco))
+else:
+    preco = 0.45 * distancia
+    print("Você terá que pagar {}R$ pela viagem".format(preco))'''
 
