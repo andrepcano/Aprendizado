@@ -614,3 +614,28 @@ else:
     preco = 0.45 * distancia
     print("Você terá que pagar {}R$ pela viagem".format(preco))'''
 
+
+
+#Crie um programa que leia varios numeros inteiros pelo teclado. O programa so vai parar quando digitar 999. 
+#No final mostre quantos numeros foram digitados e o resultado da soma.
+
+'''numero = int(input("Digite um valor (999 para parar): "))
+soma = 0
+quantidade = 0
+
+while (numero != 999):
+    numero = int(input("Digite um valor (999 para parar): "))
+    soma += numero
+    quantidade += 1
+
+print("a soma dos {} valores é: {}".format(quantidade, soma))'''
+
+
+#Faça um programa que mostre a tabuada de varios numeros, um de cada vez para cada valor digitado pelo user
+#O programa sera interrompido quando o numero digitado for negativo
+
+numero = int(input("Digite o número que quer saber a tabuada: "))
+
+while (numero >= 1):
+    for numero in range(1, 10):
+        

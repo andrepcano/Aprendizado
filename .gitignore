@@ -1,0 +1,16 @@
+# Configurações locais da IDE
+.idea/
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Credenciais e variáveis locais
+.env
+.env.*
+!.env.example
