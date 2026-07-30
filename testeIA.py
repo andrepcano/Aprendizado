@@ -1,3 +1,5 @@
+""" Primeiro programa usando IA (codex)
+
 while True:
     try:
         numero = float(input("Digite um número (negativo para sair): ").replace(",", "."))
@@ -9,4 +11,4 @@ while True:
         break
 
     for i in range(1, 11):
-        print(f"{numero:g} x {i} = {numero * i:g}")
+        print(f"{numero:g} x {i} = {numero * i:g}")"""
