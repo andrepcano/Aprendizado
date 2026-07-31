@@ -1,5 +1,6 @@
 # Configurações locais da IDE
 .idea/
+.codex/
 
 # Arquivos gerados pelo Python
 __pycache__/
