@@ -5,6 +5,7 @@
 - Antes de criar, editar, mover, renomear ou excluir arquivos, peça confirmação ao usuário.
 - Após uma confirmação, altere somente os arquivos e pastas que fazem parte do pedido.
 - Informe claramente o que foi alterado e aguarde a revisão do usuário quando solicitado.
+- Antes de qualquer alteração, mostre alternativas, aguarde a escolha do usuário e peça uma confirmação final explícita antes de editar qualquer arquivo.
 
 ## Exercícios Python
 
