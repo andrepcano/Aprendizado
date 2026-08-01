@@ -18,7 +18,7 @@ while True:
         notas_10 = resto // 10
         resto = resto % 10
         notas_1 = resto // 1
-        print(f"O saque de {saque} precisou de: \n{notas_50} notas de 50, \n{notas_20} notas de 20, \n{notas_10} notas de 10, \n{notas_1} noats de 1")
+        print(f"O saque de {saque} precisou de: \n{notas_50} notas de 50, \n{notas_20} notas de 20, \n{notas_10} notas de 10 \n{notas_1} noats de 1")
         break
     else:
         print("Digite um valor maior que zero!")
