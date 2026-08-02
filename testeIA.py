@@ -43,3 +43,30 @@ while True:
 
         if quantidade > 0:
             print(f"{quantidade} nota(s) de R${cedula}")
+
+
+# Exercício: Tabela de preços com tuplas
+# Crie uma tupla contendo nomes de produtos e seus respectivos preços.
+# Em seguida, exiba os produtos e preços organizados em uma tabela.
+
+produtos = (
+    ("Lápis", 2.50),
+    ("Caderno", 15.90),
+    ("Borracha", 1.75),
+    ("Mochila", 89.90),
+)
+
+print("-" * 35)
+print("TABELA DE PREÇOS")
+print("-" * 35)
+
+for nome, preco in produtos:
+    print(f"{nome:.<25} R${preco:>7.2f}")
+
+print("-" * 35)
+
+# Explicação:
+# 'produtos' é uma tupla que armazena outras tuplas.
+# Cada tupla interna possui o nome de um produto e seu preço.
+# O laço 'for' percorre cada produto, separando nome e preço.
+# A formatação deixa a saída organizada como uma tabela.
