@@ -96,9 +96,26 @@ while True:
 #Defina a função matematica da figura na lousa:
 #Retorne o valor de y(x) dado a entrada do valor x pelo usuario
 
+'''def y(x):
+    if x <= 2:
+        res = x
+    elif x<= 3.5:
+        res = 2
+    elif x <= 5:
+        res = 3
+    else:
+        res = x**2 - 10*x + 28
+    return res
+
+print(y(4))'''
 
 
-
+#Ex.6
+#Crie um programa em Python que permita cadastrar alunos, registrar duas notas e calcular informaçoes da turma.
+#O Programa deve permitir: 1) Cadastrar aluno (nome + 2 notas), 2) Listar todos os alunos cadastrados
+#3) mostrar estatisticas da turma (total de alunos, media, aprovados/reprovados) 4) Sair do Programa
+#Crie 3 listas: nomes, notas1, notas2 Funções: exibir_menu(), cadastrar_aluno(nomes, nota1, nota2)
+#situacao(media), listar_alunos(nomes, nota1, nota2), estatisticas_turma(nomes, notas1, notas2)
         
 
 
