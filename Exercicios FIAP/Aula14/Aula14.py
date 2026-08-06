@@ -117,6 +117,77 @@ print(y(4))'''
 #Crie 3 listas: nomes, notas1, notas2 Funções: exibir_menu(), cadastrar_aluno(nomes, nota1, nota2)
 #situacao(media), listar_alunos(nomes, nota1, nota2), estatisticas_turma(nomes, notas1, notas2)
         
+lista_alunos = []
+lista_nota_1 = []
+lista_nota_2 = []
+
+def escolher_opcao():
+    while True:
+        try:
+            print(" 1- Cadastrar Alunos\n 2- Listar Alunos\n 3- Estatisticas da Turma\n 4- Sair do Programa ")
+            escolha = int(input("Escolha: "))
+            if escolha in (1, 2, 3, 4):
+                return escolha
+            else:
+                print("Escolha uma opção de 1 a 4.")
+                continue
+        except ValueError:
+            print("Digite o Número corretamente...")
+            continue
+
+
+while True:
+    escolha = escolher_opcao()
+    if escolha == 1:
+        while True:
+            try:
+                nome = input("\nDigite o Nome: ")
+                nota1 = float(input("Digite a Primeira nota: "))
+                nota2 = float(input("Digite a Segunda nota: "))
+                if 0 <= nota1 <= 10 and 0 <= nota2 <= 10:
+                    lista_alunos.append(nome)
+                    lista_nota_1.append(nota1)
+                    lista_nota_2.append(nota2)
+                    break
+                else:
+                    print("As notas devem estar entre 0 e 10.")
+            except ValueError:
+                print("Digite o Valor corretamente...")
+                continue
+
+    elif escolha == 2:
+        for indice, nome in enumerate(lista_alunos, start=1):
+            print(f"{indice}° Nome: {nome}")
+    elif escolha == 3:
+        total_alunos = len(lista_alunos)
+        print(f"\nTotal de Alunos: {total_alunos}")
+        if total_alunos > 0:
+            soma_notas = 0
+            quantidade_notas = 0
+            for nota in lista_nota_1:
+                soma_notas += nota
+                quantidade_notas += 1
+            for nota in lista_nota_2:
+                soma_notas += nota
+                quantidade_notas += 1
+            media_geral = soma_notas / quantidade_notas
+            print(f"Media Geral: {media_geral:.1f}")
+        else:
+            print("Nenhum aluno cadastrado para calcular a media geral.")
+        for indice, nome in enumerate(lista_alunos):
+            media_aluno = (lista_nota_1[indice] + lista_nota_2[indice]) / 2
+            print(f"\nMedia Aluno {indice + 1}°: {media_aluno}")
+            if media_aluno >= 6:
+                print("E Está APROVADO!!")
+            else:
+                print("E Está REPROVADO!!")
+    elif escolha == 4:
+        print("\nPrograma Encerrado")
+        break
+    
+
+
+
 
 
 
