@@ -143,7 +143,7 @@ while True:
             try:
                 nome = input("\nDigite o Nome: ")
                 nota1 = float(input("Digite a Primeira nota: "))
-                nota2 = float(input("Digite a Segunda nota: "))
+                nota2 = float(input("Digite a Segunda nota: \n"))
                 if 0 <= nota1 <= 10 and 0 <= nota2 <= 10:
                     lista_alunos.append(nome)
                     lista_nota_1.append(nota1)
@@ -184,7 +184,7 @@ while True:
     elif escolha == 4:
         print("\nPrograma Encerrado")
         break
-    
+
 
 
 
