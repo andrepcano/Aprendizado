@@ -30,7 +30,8 @@ print(strings_separadas("Python", "Java", "C#", "JavaScript"))'''
 #Se usar "global" dentro de uma função ou algum local que declara a variavel local da para usar o mesmo nome e usando a global
 # declarando ela como global, ai usa a global e nao substitui ela
 
-#Ex.4
+#Ex.4 - Crie um programa que simule um banco, usando variaveis globais saldo e transações. Implemente as funções
+#depositar(valor), sacar(valor) e extrato()
 saldo = 0
 transacoes = []
 
@@ -97,7 +98,7 @@ def extrato():
     else:
         for transacao in transacoes:
             print(transacao)
-    print(f"Saldo: R$ {saldo:.2f}")
+    print(f"\nSaldo: R$ {saldo:.2f}")
     print("\n===============================")
 
 escolher_opcoes()
