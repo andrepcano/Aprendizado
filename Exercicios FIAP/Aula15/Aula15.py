@@ -101,7 +101,11 @@ def extrato():
     print(f"\nSaldo: R$ {saldo:.2f}")
     print("\n===============================")
 
-escolher_opcoes()
+def main():
+    escolher_opcoes()
+
+if __name__ == "__main__":
+    main()
 
 
 
